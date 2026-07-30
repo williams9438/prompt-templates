@@ -8,45 +8,53 @@ TASK / SPEC:
 OUTPUT FORMAT:
 
 1. Test Objectives
+- What are we proving?
+- What failure are we trying to prevent?
 
-2. Unit Tests
+2. Coverage Map
+- What must be tested
+- What is out of scope
+- Highest-risk areas
+
+3. Unit Tests
 - Core logic
 - Validation logic
 - Edge-case handling
 
-3. Integration Tests
+4. Integration Tests
 - API interactions
 - Database interactions
 - External service interactions
 
-4. UI / Workflow Tests
+5. UI / Workflow Tests
 - User interaction flows
 - Validation/error states
 - Accessibility considerations
 
-5. Performance Tests
+6. Performance Tests
 - Load handling
 - Stress testing
 - Latency expectations
 
-6. Failure Scenario Tests
+7. Failure Scenario Tests
 - Network failures
 - Partial failures
 - Invalid data
 - Timeout/retry behavior
 
-7. Regression Testing
+8. Regression Testing
 - Existing functionality impacted
 - Backward compatibility concerns
+- Adjacent flows to protect
 
-8. Acceptance Criteria Checklist
+9. Acceptance Criteria Checklist
 - Definition of done
 - Business validation checklist
 
-9. Risks / Assumptions
-10. Open Questions
+10. Risks / Assumptions
+11. Open Questions
 
-11. Suggested Test Data
+12. Suggested Test Data
 - Example datasets
 - Mock scenarios
 - Edge-case examples
@@ -54,3 +62,4 @@ OUTPUT FORMAT:
 IMPORTANT:
 - Focus on production-grade validation
 - Ensure the test plan is executable by engineers or AI agents
+- Prefer tests that reduce regression risk the most

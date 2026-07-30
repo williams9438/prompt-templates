@@ -8,6 +8,8 @@ TASK:
 OUTPUT FORMAT:
 
 1. Infrastructure Summary
+- What change is being proposed?
+- Why does it matter operationally?
 
 2. AWS Services Impacted
 - S3
@@ -23,6 +25,7 @@ OUTPUT FORMAT:
 - New services/components
 - Deployment flow changes
 - CI/CD implications
+- Observability changes
 
 4. Security Considerations
 - IAM permissions
@@ -51,6 +54,7 @@ OUTPUT FORMAT:
 - Deployment validation
 - Load testing
 - Failure simulation
+- Rollback validation
 
 9. Risks / Assumptions
 10. Open Questions
@@ -63,3 +67,4 @@ OUTPUT FORMAT:
 IMPORTANT:
 - Prioritize production-safe architecture decisions
 - Do not generate infrastructure code unless requested
+- Separate fact, assumption, and recommendation clearly
