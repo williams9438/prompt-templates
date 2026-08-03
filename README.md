@@ -26,6 +26,24 @@ Recommended sequence:
 10. Use `workflow.md` for exact prompt chains and `planning/model-router.md` when deciding whether to stay on GPT-5.4-mini.
 11. Use `planning/multi-session-workflow-designer.md` to rewrite a one-off prompt into a seven-session engineering workflow.
 12. Use `daily-use.md` for the quickest day-to-day operating guide.
+13. Use `planning/routing-policy.md`, `planning/fresh-session-rules.md`, or `planning/agent-policy.md` for model selection and session boundaries.
+
+## How To Use The Policy Files
+
+Use the policy files when you want the workflow to be more consistent and less dependent on memory.
+
+Recommended usage:
+1. Start with `daily-use.md` for normal Jira tickets, bugs, and PRs.
+2. Use `planning/routing-policy.md` when deciding whether GPT-5.4-mini is enough.
+3. Use `planning/fresh-session-rules.md` when a stage must be independent from earlier reasoning.
+4. Use `planning/agent-policy.md` as the base policy when you want one unified instruction set for an agent.
+5. Use `planning/multi-session-workflow-designer.md` when you need to rewrite an older prompt into a better multi-session workflow.
+
+Practical rule:
+- If the task is routine, follow `daily-use.md`.
+- If the task is risky or ambiguous, check `planning/routing-policy.md` first.
+- If the task needs independent verification, use `planning/fresh-session-rules.md`.
+- If you want one policy to paste into an agent setup, use `planning/agent-policy.md`.
 
 ## Operating Principles
 
@@ -85,6 +103,9 @@ Try to include:
 - `qa/jira-eval-checklist.md` - reusable daily Jira quality checklist
 - `planning/multi-session-workflow-designer.md` - rewrite prompt into an evidence-driven multi-session workflow
 - `daily-use.md` - one-page daily operating guide for tickets, bugs, and PRs
+- `planning/routing-policy.md` - exact rules for GPT-5.4-mini vs stronger model
+- `planning/fresh-session-rules.md` - which stages must be fresh sessions
+- `planning/agent-policy.md` - unified routing, session, and review standards
 
 ## Best Practices For Optimum Results
 
