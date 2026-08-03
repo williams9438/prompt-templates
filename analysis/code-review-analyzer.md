@@ -32,6 +32,7 @@ OUTPUT FORMAT:
 - Readability
 - Maintainability
 - Error handling
+- Cleanup / teardown safety, including whether a `finally` block is the right default for releasing resources, restoring state, or ensuring invariant cleanup
 - Performance
 - Security or permissions implications
 
@@ -48,4 +49,4 @@ IMPORTANT:
 - Be specific about file, behavior, and failure mode when possible
 - If no issues are found, say so explicitly and mention residual risks
 - Do not rewrite the code; focus on review and risk detection
-
+- Treat `try/finally` as the standard review expectation whenever code acquires resources, changes state, or must guarantee cleanup even on failure

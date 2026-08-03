@@ -23,6 +23,8 @@ Recommended sequence:
 7. Use `qa/QA-test-generator.md` once the task is understood to produce a strong validation plan.
 8. Use `planning/implementation-planner.md` to turn the analysis into an execution sequence.
 9. Use `planning/release-notes.md` or `planning/postmortem.md` when you need a delivery summary or incident write-up.
+10. Use `workflow.md` for exact prompt chains and `planning/model-router.md` when deciding whether to stay on GPT-5.4-mini.
+11. Use `planning/multi-session-workflow-designer.md` to rewrite a one-off prompt into a seven-session engineering workflow.
 
 ## Operating Principles
 
@@ -77,6 +79,10 @@ Try to include:
 - `planning/implementation-planner.md` - task sequencing, dependencies, and rollout planning
 - `planning/release-notes.md` - delivery summary and user-facing change log
 - `planning/postmortem.md` - incident review and corrective action planning
+- `planning/model-router.md` - decide when GPT-5.4-mini is enough vs when to escalate
+- `workflow.md` - exact prompt chains for feature, bug, PR, infra, release, and incident work
+- `qa/jira-eval-checklist.md` - reusable daily Jira quality checklist
+- `planning/multi-session-workflow-designer.md` - rewrite prompt into an evidence-driven multi-session workflow
 
 ## Best Practices For Optimum Results
 
