@@ -25,6 +25,7 @@ Recommended sequence:
 9. Use `planning/release-notes.md` or `planning/postmortem.md` when you need a delivery summary or incident write-up.
 10. Use `workflow.md` for exact prompt chains and `planning/model-router.md` when deciding whether to stay on GPT-5.4-mini.
 11. Use `planning/multi-session-workflow-designer.md` to rewrite a one-off prompt into a seven-session engineering workflow.
+12. Use `daily-use.md` for the quickest day-to-day operating guide.
 
 ## Operating Principles
 
@@ -83,6 +84,7 @@ Try to include:
 - `workflow.md` - exact prompt chains for feature, bug, PR, infra, release, and incident work
 - `qa/jira-eval-checklist.md` - reusable daily Jira quality checklist
 - `planning/multi-session-workflow-designer.md` - rewrite prompt into an evidence-driven multi-session workflow
+- `daily-use.md` - one-page daily operating guide for tickets, bugs, and PRs
 
 ## Best Practices For Optimum Results
 
