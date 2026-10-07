@@ -15,18 +15,19 @@ Use the templates as a workflow, not as isolated prompts.
 
 Recommended sequence:
 1. Start with `analysis/ticket-analyzer.md` for any Jira ticket or ambiguous request.
-2. Use `analysis/feature-analyzer.md` for product features or UX changes.
-3. Use `analysis/bug-analyzer.md` for defects, regressions, incidents, or unexpected behavior.
-4. Use `analysis/processing-analyzer.md` for batch jobs, pipelines, data workflows, or long-running compute.
-5. Use `analysis/AWS-infra-analyzer.md` for cloud, deployment, IAM, scaling, or operational changes.
-6. Use `analysis/code-review-analyzer.md` for PR review, regression spotting, and release readiness.
-7. Use `qa/QA-test-generator.md` once the task is understood to produce a strong validation plan.
-8. Use `planning/implementation-planner.md` to turn the analysis into an execution sequence.
-9. Use `planning/release-notes.md` or `planning/postmortem.md` when you need a delivery summary or incident write-up.
-10. Use `workflow.md` for exact prompt chains and `planning/model-router.md` when deciding whether to stay on GPT-5.4-mini.
-11. Use `planning/multi-session-workflow-designer.md` to rewrite a one-off prompt into a seven-session engineering workflow.
-12. Use `daily-use.md` for the quickest day-to-day operating guide.
-13. Use `planning/routing-policy.md`, `planning/fresh-session-rules.md`, or `planning/agent-policy.md` for model selection and session boundaries.
+2. Before implementation, run `analysis/pre-implementation-critical-review.md` to challenge the proposed solution against the current codebase, failure modes, branch/release state, rollback, and alternatives.
+3. Use `analysis/feature-analyzer.md` for product features or UX changes.
+4. Use `analysis/bug-analyzer.md` for defects, regressions, incidents, or unexpected behavior.
+5. Use `analysis/processing-analyzer.md` for batch jobs, pipelines, data workflows, or long-running compute.
+6. Use `analysis/AWS-infra-analyzer.md` for cloud, deployment, IAM, scaling, or operational changes.
+7. Use `analysis/code-review-analyzer.md` for PR review, regression spotting, and release readiness.
+8. Use `qa/QA-test-generator.md` once the task is understood to produce a strong validation plan.
+9. Use `planning/implementation-planner.md` to turn the analysis into an execution sequence.
+10. Use `planning/release-notes.md` or `planning/postmortem.md` when you need a delivery summary or incident write-up.
+11. Use `workflow.md` for exact prompt chains and `planning/model-router.md` when deciding whether to stay on GPT-5.4-mini.
+12. Use `planning/multi-session-workflow-designer.md` to rewrite a one-off prompt into a seven-session engineering workflow.
+13. Use `daily-use.md` for the quickest day-to-day operating guide.
+14. Use `planning/routing-policy.md`, `planning/fresh-session-rules.md`, or `planning/agent-policy.md` for model selection and session boundaries.
 
 ## How To Use The Policy Files
 
@@ -89,6 +90,7 @@ Try to include:
 ## Template Index
 
 - `analysis/ticket-analyzer.md` - general Jira ticket to implementation-ready specification
+- `analysis/pre-implementation-critical-review.md` - challenge a proposed solution against the current codebase, failure modes, data consistency, branches/releases, rollback, and alternatives before coding
 - `analysis/feature-analyzer.md` - product feature analysis and architecture planning
 - `analysis/bug-analyzer.md` - defect analysis, reproduction, likely root cause, and fix strategy
 - `analysis/processing-analyzer.md` - data and processing pipeline analysis
@@ -119,10 +121,10 @@ Try to include:
 ## Suggested Prompt Chain
 
 For a feature:
-`analysis/ticket-analyzer.md` -> `analysis/feature-analyzer.md` -> `planning/implementation-planner.md` -> `qa/QA-test-generator.md`
+`analysis/ticket-analyzer.md` -> `analysis/pre-implementation-critical-review.md` -> `analysis/feature-analyzer.md` -> `planning/implementation-planner.md` -> `qa/QA-test-generator.md`
 
 For a bug:
-`analysis/ticket-analyzer.md` -> `analysis/bug-analyzer.md` -> `planning/implementation-planner.md` -> `qa/QA-test-generator.md`
+`analysis/ticket-analyzer.md` -> `analysis/pre-implementation-critical-review.md` -> `analysis/bug-analyzer.md` -> `planning/implementation-planner.md` -> `qa/QA-test-generator.md`
 
 For infra or pipeline work:
 `analysis/ticket-analyzer.md` -> `analysis/AWS-infra-analyzer.md` or `analysis/processing-analyzer.md` -> `planning/implementation-planner.md` -> `qa/QA-test-generator.md`
