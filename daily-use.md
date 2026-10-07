@@ -30,6 +30,8 @@ If it is a bug, paste:
 
 Use `analysis/ticket-analyzer.md` first for almost everything.
 
+Before coding, run `analysis/pre-implementation-critical-review.md` whenever the task introduces a new solution, changes architecture/data flow, touches shared code, affects multiple environments, or has meaningful regression risk. It should inspect the current codebase and challenge the proposed approach before implementation.
+
 Then choose one of these:
 - feature work -> `analysis/feature-analyzer.md`
 - bug or regression -> `analysis/bug-analyzer.md`
@@ -47,19 +49,21 @@ Then use:
 
 Use this sequence for feature work:
 1. `analysis/ticket-analyzer.md`
-2. `analysis/feature-analyzer.md`
-3. `planning/implementation-planner.md`
-4. `qa/QA-test-generator.md`
-5. implement
-6. `analysis/code-review-analyzer.md`
+2. `analysis/pre-implementation-critical-review.md`
+3. `analysis/feature-analyzer.md`
+4. `planning/implementation-planner.md`
+5. `qa/QA-test-generator.md`
+6. implement
+7. `analysis/code-review-analyzer.md`
 
 Use this sequence for bug work:
 1. `analysis/ticket-analyzer.md`
-2. `analysis/bug-analyzer.md`
-3. `planning/implementation-planner.md`
-4. `qa/QA-test-generator.md`
-5. implement
-6. `analysis/code-review-analyzer.md`
+2. `analysis/pre-implementation-critical-review.md` when the fix changes behaviour, architecture, data flow, or shared code
+3. `analysis/bug-analyzer.md`
+4. `planning/implementation-planner.md`
+5. `qa/QA-test-generator.md`
+6. implement
+7. `analysis/code-review-analyzer.md`
 
 Use this sequence for PR review:
 1. `analysis/code-review-analyzer.md`
